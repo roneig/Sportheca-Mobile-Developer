@@ -1,5 +1,7 @@
 package br.com.dio.desafio.dominio;
 
+import java.util.Objects;
+
 public class Curso extends Conteudo{
 
     private int cargaHoraria;
@@ -28,5 +30,18 @@ public class Curso extends Conteudo{
                 ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Curso curso = (Curso) o;
+        return cargaHoraria == curso.cargaHoraria;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.getTitulo(), super.getDescricao(), cargaHoraria);
     }
 }

@@ -1,6 +1,7 @@
 package br.com.dio.desafio.dominio;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Mentoria extends Conteudo{
 
@@ -29,5 +30,18 @@ public class Mentoria extends Conteudo{
                 ", descricao='" + getDescricao() + '\'' +
                 ", data=" + data +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mentoria mentoria = (Mentoria) o;
+        return Objects.equals(data, mentoria.data);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.getTitulo(), super.getDescricao(), data);
     }
 }

@@ -14,6 +14,11 @@ public class Bootcamp {
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
+    public void inscreverAluno(Dev dev) {
+        if (getDevsInscritos().add(dev)) {
+            dev.getConteudosInscritos().addAll(conteudos);
+        }
+    }
 
     public String getNome() {
         return nome;
@@ -67,4 +72,5 @@ public class Bootcamp {
     public int hashCode() {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, devsInscritos, conteudos);
     }
+
 }

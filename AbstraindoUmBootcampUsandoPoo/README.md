@@ -1,5 +1,14 @@
 <h1> Desafio: Aprenda na Prática Programação Orientada a Objetos</h1>
 
+
+<h3 style="color:#0000FF;"> Obrigado professora! pelo conteúdo apresentado.</h3>
+<p><strong>Usei as modificações para exercitar os conceitos de Set:</strong><br><strong>1-</strong> alterei o código para não permitir a inclusão de conteúdos duplos no Set de conteúdos do Bootcamp
+   (inclui os métodos equals e hashcode nas classes Curso e Mentoria).<br> O método add()  retorna false qdo encontra duplicidade e não adiciona o conteúdo.<br><br><strong>2-</strong> retirei o método de inscrição no bootcamp da classe Dev e coloquei na classe Bootcamp, assumindo que o nome do dev esteja
+   funcionando como uma key, alterei o método equals para testar somente o nome do dev assim, o método inscreverAluno, não 
+   permite que um aluno com a mesma key seja matriculado.<br><br> -----------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+
+
 <p> Sejam bem-vindos ao desafio: <strong>APRENDENDO NA PRÁTICA O PARADIGMA DE ORIENTAÇÃO A OBJETOS.</strong><br>Desafio este que tive a honra de co-criar com a plataforma de cursos online <strong><a href="https://web.digitalinnovation.one/">DIGITAL INNOVATION ONE</a></strong> 💛🧡 e disponibilizado de forma gratuita para a comunidade dos desenvolvedores Java.<br>
     💎 O objetivo principal é colocar em prática umas das principais ferramentas da OO: <strong>ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO,</strong> através de um projeto Java. </p>
 

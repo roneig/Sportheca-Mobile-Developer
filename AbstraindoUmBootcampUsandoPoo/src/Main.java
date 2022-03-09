@@ -33,30 +33,57 @@ public class Main {
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
 
+        System.out.println("+++++++++++++++++++++++++++++++++++++++");
+        System.out.println("Conteúdos do Bootcamp: qtd. " +  bootcamp.getConteudos().size() + " - " + bootcamp.getConteudos());
+
+        System.out.println("Tentativa de inclusão conteúdo duplo (acompanhar no código Main)");
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+
+        System.out.println("Conteúdos do Bootcamp: qtd. " +  bootcamp.getConteudos().size() + " - " + bootcamp.getConteudos());
+        System.out.println("+++++++++++++++++++++++++++++++++++++++");
+
         Dev devAluno1 = new Dev();
         devAluno1.setNome("Aluno1");
-        devAluno1.inscreverBootcamp(bootcamp);
+        //devAluno1.inscreverBootcamp(bootcamp);
+        bootcamp.inscreverAluno(devAluno1);
         System.out.println("Conteúdos Inscritos Aluno1:" + devAluno1.getConteudosInscritos());
         devAluno1.progredir();
         devAluno1.progredir();
         System.out.println("-");
-        System.out.println("Conteúdos Inscritos Aluno1:" + devAluno1.getConteudosInscritos());
+        System.out.println("Conteúdos Inscritos Aluno1 :" + devAluno1.getConteudosInscritos());
         System.out.println("Conteúdos Concluídos Aluno1:" + devAluno1.getConteudosConcluidos());
         System.out.println("XP:" + devAluno1.calcularTotalXp());
 
         System.out.println("-------");
 
         Dev devAluno2 = new Dev();
-        devAluno2.setNome("Aluno2");
-        devAluno2.inscreverBootcamp(bootcamp);
+        devAluno2.setNome("Aluno1");
+        //devAluno2.inscreverBootcamp(bootcamp);
+        bootcamp.inscreverAluno(devAluno2);
         System.out.println("Conteúdos Inscritos Aluno2:" + devAluno2.getConteudosInscritos());
         devAluno2.progredir();
         devAluno2.progredir();
         devAluno2.progredir();
         System.out.println("-");
-        System.out.println("Conteúdos Inscritos Aluno2:" + devAluno2.getConteudosInscritos());
+        System.out.println("Conteúdos Inscritos Aluno2 :" + devAluno2.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos Aluno2:" + devAluno2.getConteudosConcluidos());
         System.out.println("XP:" + devAluno2.calcularTotalXp());
+
+        System.out.println("-------");
+        System.out.println("Tentativa de inclusão dev duplo (acompanhar no código Bootcamp-increverAluno)");
+
+        Dev devAluno3 = new Dev();
+        devAluno3.setNome("Aluno1");
+        bootcamp.inscreverAluno(devAluno3);
+        System.out.println("Conteúdos Inscritos Aluno3:" + devAluno3.getConteudosInscritos());
+        devAluno3.progredir();
+        devAluno3.progredir();
+        devAluno3.progredir();
+        System.out.println("-");
+        System.out.println("Conteúdos Inscritos Aluno3 :" + devAluno3.getConteudosInscritos());
+        System.out.println("Conteúdos Concluidos Aluno3:" + devAluno3.getConteudosConcluidos());
+        System.out.println("XP:" + devAluno3.calcularTotalXp());
 
     }
 }
